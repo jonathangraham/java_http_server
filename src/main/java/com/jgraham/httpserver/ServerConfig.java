@@ -28,7 +28,7 @@ public class ServerConfig {
                     port = Integer.parseInt(args[++i]);
                 }
                 catch (NumberFormatException nfe) {
-                    port = port;
+                    System.out.println("Invalid port entry");
                 }
             }
         }
