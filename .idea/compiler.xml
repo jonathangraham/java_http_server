@@ -26,5 +26,8 @@
         <module name="my-http-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="my-http-server" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
