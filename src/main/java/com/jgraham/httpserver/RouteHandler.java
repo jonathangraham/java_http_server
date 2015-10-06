@@ -23,8 +23,18 @@ public class RouteHandler {
                         + files;
             }
             else if (new File(route, path).exists()) {
-                httpResponse = "HTTP/1.1 200 OK\r\n\r\n"
-                        + "\r\nrequest: " + path;
+                String file = route + "/" + path;
+                BufferedReader in = new BufferedReader(new FileReader(file));
+                StringBuilder lines = new StringBuilder();
+                String line;
+                while((line = in.readLine()) != null)
+                {
+                    lines.append(line);
+                    lines.append("\n");
+                }
+                in.close();
+                httpResponse = "HTTP/1.1 200 OK\r\n\r\n" +
+                        lines;
             }
             else {
                 httpResponse = "HTTP/1.1 404 Not Found\r\n\r\n"
