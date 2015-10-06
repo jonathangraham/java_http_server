@@ -3,8 +3,6 @@ package com.jgraham.httpserver;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.List;
-import java.util.ArrayList;
 
 public class RouteHandler {
     public void getResponse (int port, String directory) throws IOException {
@@ -19,10 +17,10 @@ public class RouteHandler {
 
         while (true) try (Socket clientSocket = serverSocket.accept()) {
             String path = getPath(clientSocket);
+            StringBuilder files = buildDirectoryContents(route);
             if ("/".equals(path)) {
-                List files = buildDirectoryContents(route);
                 httpResponse = "HTTP/1.1 200 OK\r\n\r\n"
-                        + "\r\nfile directory: " + files;
+                        + files;
             }
             else if (new File(route, path).exists()) {
                 httpResponse = "HTTP/1.1 200 OK\r\n\r\n"
@@ -37,14 +35,17 @@ public class RouteHandler {
         }
     }
 
-    private List<String> buildDirectoryContents(String directoryPath) {
+    private StringBuilder buildDirectoryContents(String directoryPath) {
         File f = new File(directoryPath);
-        File[] files = f.listFiles();
-        List<String> fileNames = new ArrayList<>();
+        String[] files = f.list();
 
-        for (File file : files) {
-            fileNames.add(file.getName());
+        StringBuilder fileNames = new StringBuilder();
+        fileNames.append("<!DOCTYPE html>\n");
+        fileNames.append("<!DOCTYPE html>\n<html>\n<body>\n");
+        for (String file: files) {
+            fileNames.append(("<a href=/" + file + ">" + file + "</a><br>"));
         }
+        fileNames.append("</body>\n</html>");
         return fileNames;
     }
 

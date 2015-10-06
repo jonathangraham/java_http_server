@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92987b6f-94f2-4d60-8166-00ae2cf46b60" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/file.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/file.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/jgraham/httpserver/RouteHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/jgraham/httpserver/RouteHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/jgraham/httpserver/ServerConfigTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/jgraham/httpserver/ServerConfigTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/my-http-server-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/my-http-server-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jgraham/httpserver/RouteHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/jgraham/httpserver/RouteHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/jgraham/httpserver/ServerConfigTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/jgraham/httpserver/ServerConfigTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.jgraham.httpserver.ServerConfigTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.jgraham.httpserver.ServerConfigTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.jgraham.httpserver.ServerConfigTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.jgraham.httpserver.ServerConfigTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my-http-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,11 +62,21 @@
       <file leaf-file-name="RouteHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jgraham/httpserver/RouteHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8041237" vertical-offset="90" max-vertical-offset="960">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state vertical-scroll-proportion="1.8247423" vertical-offset="0" max-vertical-offset="975">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file1" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/file1">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,8 +148,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="172" />
-    <option name="y" value="22" />
+    <option name="x" value="159" />
+    <option name="y" value="30" />
     <option name="width" value="1066" />
     <option name="height" value="834" />
   </component>
@@ -566,7 +567,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="172" y="22" width="1066" height="834" extended-state="0" />
+    <frame x="159" y="30" width="1066" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -824,10 +825,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/file1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="485">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jgraham/httpserver/RouteHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8041237" vertical-offset="90" max-vertical-offset="960">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        <state vertical-scroll-proportion="1.8247423" vertical-offset="0" max-vertical-offset="975">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
