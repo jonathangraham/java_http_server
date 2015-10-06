@@ -19,7 +19,7 @@ public class ServerConfig {
     }
 
     public String parseDirectory(String[] args) {
-        String directory = "/public";
+        String directory = "/src/main/resources";
         for (int i = 0; i < args.length; i++) {
             if (args[i].equals("-d")) {
                 directory = args[++i];

@@ -2,6 +2,8 @@ package com.jgraham.httpserver;
 
 import junit.framework.TestCase;
 
+import java.io.File;
+
 public class ServerConfigTest
         extends TestCase
 {
@@ -42,6 +44,34 @@ public class ServerConfigTest
     public void testDefaultDirectoryNoArguments() {
         String[] args = new String[0];
         ServerConfig server = new ServerConfig();
-        assertEquals("/public", server.parseDirectory(args));
+        assertEquals("/src/main/resources", server.parseDirectory(args));
     }
+
+    public void testRootExists() {
+        String directory = (System.getProperty("user.dir")) + "/src/main/resources";
+        String file = "";
+        boolean check = new File(directory, file).exists();
+        assertEquals(true, check);
+    }
+
+    public void testFileExists() {
+        String directory = (System.getProperty("user.dir")) + "/src/main/resources";
+        String string = "GET /file.txt OK";
+        String[] split = string.split("\\s+");
+        String file = split[1];
+        boolean check = new File(directory, file).exists();
+        assertEquals(true, check);
+    }
+
+    public void testFileNotExists() {
+        String directory = (System.getProperty("user.dir")) + "/src/main/resources";
+        String string = "GET /foobar OK";
+        String[] split = string.split("\\s+");
+        String file = split[1];
+        boolean check = new File(directory, file).exists();
+        assertEquals(false, check);
+    }
+
+
+
 }
