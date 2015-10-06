@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class RouteHandler {
+
     public void getResponse (int port, String directory) throws IOException {
         String route = (System.getProperty("user.dir")) + directory;
         ServerSocket serverSocket = new ServerSocket(port);
@@ -17,32 +18,41 @@ public class RouteHandler {
 
         while (true) try (Socket clientSocket = serverSocket.accept()) {
             String path = getPath(clientSocket);
-            StringBuilder files = buildDirectoryContents(route);
             if ("/".equals(path)) {
-                httpResponse = "HTTP/1.1 200 OK\r\n\r\n"
-                        + files;
+                httpResponse = routeDirectory(route);
             }
             else if (new File(route, path).exists()) {
-                String file = route + "/" + path;
-                BufferedReader in = new BufferedReader(new FileReader(file));
-                StringBuilder lines = new StringBuilder();
-                String line;
-                while((line = in.readLine()) != null)
-                {
-                    lines.append(line);
-                    lines.append("\n");
-                }
-                in.close();
-                httpResponse = "HTTP/1.1 200 OK\r\n\r\n" +
-                        lines;
+                httpResponse = routeFiles(route, path);
             }
             else {
-                httpResponse = "HTTP/1.1 404 Not Found\r\n\r\n"
-                        + "\r\n404 error: " + path;
+                httpResponse = route404(path);
             }
             OutputStream output = clientSocket.getOutputStream();
             output.write(httpResponse.getBytes());
         }
+    }
+
+    private String routeDirectory(String route) {
+        StringBuilder files = buildDirectoryContents(route);
+        return "HTTP/1.1 200 OK\r\n\r\n" + files;
+    }
+
+    private String routeFiles(String route, String path) throws IOException {
+        String file = route + "/" + path;
+        BufferedReader in = new BufferedReader(new FileReader(file));
+        StringBuilder lines = new StringBuilder();
+        String line;
+        while((line = in.readLine()) != null)
+        {
+            lines.append(line);
+            lines.append("\n");
+        }
+        in.close();
+        return "HTTP/1.1 200 OK\r\n\r\n" + lines;
+    }
+
+    private String route404(String path) {
+        return "HTTP/1.1 404 Not Found\r\n\r\n" + path + " not found." ;
     }
 
     private StringBuilder buildDirectoryContents(String directoryPath) {
