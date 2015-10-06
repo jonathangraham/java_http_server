@@ -56,7 +56,7 @@ public class ServerConfigTest
 
     public void testFileExists() {
         String directory = (System.getProperty("user.dir")) + "/src/main/resources";
-        String string = "GET /file.txt OK";
+        String string = "GET /file1 OK";
         String[] split = string.split("\\s+");
         String file = split[1];
         boolean check = new File(directory, file).exists();

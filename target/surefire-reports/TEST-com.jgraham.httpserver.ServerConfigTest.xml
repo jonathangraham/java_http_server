@@ -63,13 +63,13 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testParsesPort" time="0.005"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testParsesPort" time="0.004"/>
   <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testDefaultPortNoArguments" time="0"/>
   <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testDefaultPortWithInvalidPort" time="0.001"/>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testServerConfigExists" time="0"/>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testDefaultDirectoryNoArguments" time="0.003"/>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testFileExists" time="0.002"/>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testParsesDirectory" time="0"/>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testRootExists" time="0.001"/>
-  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testFileNotExists" time="0"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testServerConfigExists" time="0.001"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testDefaultDirectoryNoArguments" time="0.001"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testFileExists" time="0.003"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testParsesDirectory" time="0.001"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testRootExists" time="0"/>
+  <testcase classname="com.jgraham.httpserver.ServerConfigTest" name="testFileNotExists" time="0.001"/>
 </testsuite>
